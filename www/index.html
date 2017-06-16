@@ -5,7 +5,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="msapplication-tap-highlight" content="no">
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-		<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+		<link rel="stylesheet" type="text/css" href="css/material.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>Zeiss</title>
 	</head>
@@ -17,19 +17,19 @@
 				<b>ZEISS CALC</b>
 				
 				<form class="login_form">
-					<fieldset class="uk-fieldset">
-						<div class="uk-margin">
-							<input class="uk-input uk-form-width-medium uk-width-1-1" type="text" placeholder="LOGIN">
-						</div>
-						<div class="uk-margin">
-							<input class="uk-input uk-form-width-medium uk-width-1-1" type="text" placeholder="SENHA">
-						</div>
-						<div class="uk-margin">
-							<button class="uk-button uk-button-default uk-width-1-1">ENTRAR</button>
-						</div>
-					</fieldset>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="login_input">
+						<label class="mdl-textfield__label" for="login_input">LOGIN</label>
+					</div>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="senha_input">
+						<label class="mdl-textfield__label" for="senha_input">SENHA</label>
+					</div>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">ENTRAR</button>
+					</div>
 				</form>
-				
+
 				<p uk-margin>
 					<a href="#">Esqueci minha senha</a><br>
 					Informe seu login e senha fornecida pelo consultor ZEISS para acessar o sistema.
@@ -42,8 +42,7 @@
 		</div>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/uikit.min.js"></script>
-		<script type="text/javascript" src="js/uikit-icons.min.js"></script>
+		<script type="text/javascript" src="js/material.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
