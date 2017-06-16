@@ -1,3 +1,10 @@
-document.addEventListener('deviceready', function(){
+//document.addEventListener('deviceready', function(){
+$(document).ready(function(){
 	
-}, false);
+	/* App login */
+	$(document).on("submit", ".login_form", function(){
+		
+		return false;
+	});
+});
+//}, false);
