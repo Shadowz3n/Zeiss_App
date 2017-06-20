@@ -56,7 +56,118 @@
 			</div>
 			
 			<div class="app">
-				
+				<div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
+					<div class="uk-offcanvas-bar">
+						<ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+							<li class="uk-active"><a href="#"><span class="uk-margin-small-right" uk-icon="icon: settings"></span> CONFIGURAÇÕES</a></li>
+							<li class="uk-parent uk-margin">
+								<a href="#">Menu 1</a>
+								<ul class="uk-nav-sub">
+									<li><a href="#">Sub item</a></li>
+									<li>
+										<a href="#">Sub item</a>
+										<ul>
+											<li><a href="#">Sub item</a></li>
+											<li><a href="#">Sub item</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="uk-parent uk-margin">
+								<a href="#">Menu 2</a>
+								<ul class="uk-nav-sub">
+									<li><a href="#">Sub item</a></li>
+									<li><a href="#">Sub item</a></li>
+								</ul>
+							</li>
+							<li class="uk-nav-divider uk-margin"></li>
+							<li><a href="sair.php"><span class="uk-margin-small-right" uk-icon="icon: lock"></span> Sair</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="zeiss_app">
+					<div uk-grid>
+						<div class="uk-width-1-1">
+							<div class="uk-panel">
+								<nav class="uk-navbar uk-navbar-container uk-margin uk_navbar_zeiss">
+									<a class="uk-logo" href="#">
+										<img src="img/logo.png" class="logo_app">
+									</a>
+									<div class="uk-navbar-right">
+										<a class="uk-navbar-toggle menu_padding" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav" href="#"></a>
+									</div>
+								</nav>
+								<div class="uk-overlay uk-position-bottom menu_overflow_in_navbar">
+									<ul class="uk-child-width-expand uk-text-lead uk-text-large uk-text-bold" uk-tab>
+										<li class="uk-active"><a href="#">SIMILARIDADE</a></li>
+										<li><a href="#">VANTAGENS</a></li>
+									</ul>
+								</div>
+							</div>
+							<div uk-grid>
+								<div class="uk-width-1-1">
+									<ul class="uk-switcher">
+										<li class="uk-active">
+										
+											Sugestão
+											<table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+												<thead>
+													<tr>
+														<td class="uk-table-shrink">Produto</td>
+														<td>Qtde</td>
+														<td>Custo</td>
+														<td>Venda</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+								
+											Zeiss
+											<table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+												<thead>
+													<tr>
+														<td class="uk-table-shrink">Produto</td>
+														<td>Qtde</td>
+														<td>Custo</td>
+														<td>Venda</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<ul class="uk-list uk-list-striped">
+												<li>
+													Economia Mensal
+												</li>
+												<li>
+													Economia Mensal
+												</li>
+												<li>
+													Economia Mensal
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="cordova.js"></script>

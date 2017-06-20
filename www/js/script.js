@@ -2,7 +2,6 @@
 $(document).ready(function(){
 	
 	/* App login */
-	/* App login */
 	$(document).on("submit", ".login_form", function(){
 		var thisForm	= $(this);
 		$.ajax({
@@ -15,7 +14,9 @@ $(document).ready(function(){
 			}
 		}).done(function(data){
 			if(Number(data)>0){
-				//document.location.reload();
+				$(".zeiss_login").stop().fadeOut(250, function(){
+					$(".app").stop().fadeIn(250);
+				});
 			}else{
 				UIkit.notification('Login ou senha incorretos, por favor tente novamente.', 'danger');
 				$(thisForm).find("input, button").prop({disabled:false});
