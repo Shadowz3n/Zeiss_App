@@ -86,10 +86,24 @@ $(document).ready(function(){
 		});
 		return false;
 	}).on("submit", ".add_comparation_form", function(){
-		$(".table_sugestao").find("tbody").append('');
+	
+		var lineTable_sugestao	= '<tr>';
+		$("#add_comparation_modal").find("input[data-appendto='table_sugestao']").each(function(){
+			lineTable_sugestao	+= '<td>'+$(this).val()+'</td>';
+		});
+		lineTable_sugestao		+= '</tr>';
+		$(".table_sugestao").find("tbody").append(lineTable_sugestao);
+		
+		var lineTable_zeiss		= '<tr>';
+		$("#add_comparation_modal").find("input[data-appendto='table_zeiss']").each(function(){
+			lineTable_zeiss	+= '<td>'+$(this).val()+'</td>';
+		});
+		lineTable_zeiss		+= '</tr>';
+		$(".table_zeiss").find("tbody").append(lineTable_zeiss);
+		
 		UIkit.modal("#add_comparation_modal").hide();
 		$("#add_comparation_modal").find("input").val("");
-		console.log(123);
+		$.calc();
 		return false;
 	}).on("click", ".exit_app", function(){
 		$(".app").stop().fadeOut(250, function(){
