@@ -3,10 +3,22 @@ $(document).ready(function(){
 
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(function(){
-		var chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
-		chart.draw(google.visualization.arrayToDataTable([
+		var markup_chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
+		markup_chart.draw(google.visualization.arrayToDataTable([
 			['',  'Médio Cliente', 'Médio Zeiss'],
 			['Markup', 3, 7]
+		]), {
+			title: '', 
+			isStacked: false,
+			width:$(window).width(),
+			legend: { position: 'top' },
+			colors: ['#000000', '#53A8FB']
+		});
+		
+		var custo_chart = new google.visualization.SteppedAreaChart(document.getElementById('custo_chart'));
+		custo_chart.draw(google.visualization.arrayToDataTable([
+			['',  'Médio Cliente', 'Médio Zeiss'],
+			['Custo', 3, 7]
 		]), {
 			title: '', 
 			isStacked: false,
