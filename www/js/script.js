@@ -3,30 +3,27 @@ $(document).ready(function(){
 
 	var app_url	= "http://www.zeisscalc.com.br/";
 
-	google.charts.load('current', {'packages':['corechart']});
+	google.charts.load('current', {'packages':['bar']});
+	
 	google.charts.setOnLoadCallback(function(){
-		var markup_chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
-		markup_chart.draw(google.visualization.arrayToDataTable([
-			['',  'Médio Cliente', 'Médio Zeiss'],
-			['Markup', 3, 4]
-		]), {
-			isStacked: false,
-			width:$(window).width(),
-			legend: { position: 'top' },
-			colors: ['#000000', '#53A8FB']
-		});
+		var chart = new google.charts.Bar(document.getElementById('markup_chart'));
+		chart.draw(google.visualization.arrayToDataTable([
+			['Markup', 'Médio Zeiss', 'Médio Cliente'],
+			['Markup', 4, 3]
+		]), google.charts.Bar.convertOptions({
+			width: $(window).width(),
+			chart: {legend: {position: 'top'}}
+		}));
 		
-		var custo_chart = new google.visualization.SteppedAreaChart(document.getElementById('custo_chart'));
-		custo_chart.draw(google.visualization.arrayToDataTable([
-			['',  'Médio Cliente', 'Médio Zeiss'],
-			['Custo', 155, 127]
-		]), {
-			isStacked: false,
-			width:$(window).width(),
-			legend: { position: 'top' },
-			colors: ['#000000', '#53A8FB']
-		});
-	});
+		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
+		chart.draw(google.visualization.arrayToDataTable([
+			['Markup', 'Médio Zeiss', 'Médio Cliente'],
+			['Markup', 127, 155]
+		]), google.charts.Bar.convertOptions({
+			width: $(window).width(),
+			legend: {position: 'top'}
+		}));
+	});//#53A8FB
 	
 	UIkit.tab($("#switcher_menu"), {});
 	
