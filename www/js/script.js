@@ -10,6 +10,7 @@ $(document).ready(function(){
 		]), {
 			title: '', 
 			isStacked: false,
+			width:$(window).width(),
 			legend: { position: 'top' },
 			colors: ['#000000', '#53A8FB']
 		});
