@@ -25,7 +25,7 @@ $(document).ready(function(){
 			legend:{position:'left',alignment:'start'},
 			isStacked: false
 		}));
-	});//#53A8FB
+	});
 	
 	UIkit.tab($("#switcher_menu"), {});
 	
@@ -116,6 +116,9 @@ $(document).ready(function(){
 		$("#offcanvas-nav").click();
 		window.localStorage.removeItem("user_id");
 		return false;
+	}).on("keydown", ".only_numbers", function(e){
+		var key = e.charCode || e.keyCode || 0;
+		return (key == 8 || key == 9 ||key == 13 ||key == 46 ||key == 110 ||key == 190 || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
 	});
 	
 	if(window.localStorage.user_id){
