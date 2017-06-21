@@ -1,6 +1,8 @@
 //document.addEventListener('deviceready', function(){
 $(document).ready(function(){
 
+	var app_url	= "http://www.zeisscalc.com.br/";
+
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(function(){
 		var markup_chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
@@ -8,7 +10,6 @@ $(document).ready(function(){
 			['',  'Médio Cliente', 'Médio Zeiss'],
 			['Markup', 3, 7]
 		]), {
-			title: '', 
 			isStacked: false,
 			width:$(window).width(),
 			legend: { position: 'top' },
@@ -20,7 +21,6 @@ $(document).ready(function(){
 			['',  'Médio Cliente', 'Médio Zeiss'],
 			['Custo', 3, 7]
 		]), {
-			title: '', 
 			isStacked: false,
 			width:$(window).width(),
 			legend: { position: 'top' },
@@ -34,14 +34,16 @@ $(document).ready(function(){
 	$(document).on("submit", ".login_form", function(){
 		var thisForm	= $(this);
 		$.ajax({
-			url:document.location.href,
+			url:app_url,
 			type:"POST",
 			data:$(thisForm).serialize(),
+			dataType:"JSON",
 			beforeSend:function(){
 				$(thisForm).find("input, button").prop({disabled:true});
 				$(".btn_login_form").find("div").removeClass("uk-hidden").end().find("span").html(" CARREGANDO..");
 			}
 		}).done(function(data){
+			console.log(data);
 			if(Number(data)>0){
 				$(".zeiss_login").stop().fadeOut(250, function(){
 					$(".app").stop().fadeIn(250);
