@@ -43,7 +43,9 @@ $(document).ready(function(){
 		
 		var lucro_mensal	= ((zeiss_venda-zeiss_custo) - (sugestao_venda-sugestao_custo));
 			lucro_anual		= lucro_mensal*12;
-		console.log(lucro_mensal);
+			
+		$("#economia_mensal").html(lucro_mensal.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
+		$("#economia_anual").html(lucro_anual.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
 	}
 	
 	$.calc();
