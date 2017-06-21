@@ -29,6 +29,25 @@ $(document).ready(function(){
 	
 	UIkit.tab($("#switcher_menu"), {});
 	
+	$.calc	= function(){
+		var sugestao_custo	= 0, sugestao_venda	= 0;
+		var zeiss_custo	= 0, zeiss_venda = 0;
+		$(".table_sugestao").find("tbody").find("tr").each(function(){
+			sugestao_custo	+= Number($(this).find("td").eq(1).html().replace(",", ".")) * Number($(this).find("td").eq(2).html().replace(",", "."));
+			sugestao_venda	+= Number($(this).find("td").eq(1).html().replace(",", ".")) * Number($(this).find("td").eq(3).html().replace(",", "."));
+		});
+		$(".table_zeiss").find("tbody").find("tr").each(function(){
+			zeiss_custo	+= Number($(this).find("td").eq(1).html().replace(",", ".")) * Number($(this).find("td").eq(2).html().replace(",", "."));
+			zeiss_venda	+= Number($(this).find("td").eq(1).html().replace(",", ".")) * Number($(this).find("td").eq(3).html().replace(",", "."));
+		});
+		
+		var lucro_mensal	= ((zeiss_venda-zeiss_custo) - (sugestao_venda-sugestao_custo));
+			lucro_anual		= lucro_mensal*12;
+		console.log(lucro_mensal);
+	}
+	
+	$.calc();
+	
 	/* App login */
 	$(document).on("submit", ".login_form", function(){
 		var thisForm	= $(this);
