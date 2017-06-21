@@ -11,19 +11,20 @@ $(document).ready(function(){
 			['Markup', 'Médio Zeiss', 'Médio Cliente'],
 			['Markup', 4, 3]
 		]), google.charts.Bar.convertOptions({
-			width: $(window).width(),
-			isStacked: false,
-			legent:{position:'top', alignment: 'end'}
+			width: $(window).width()-35,
+			legend:{position:'none'},
+			isStacked: false
 		}));
+		console.log(google.charts.Bar.convertOptions({legend:{position:'in'}}));
 		
 		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
 		chart.draw(google.visualization.arrayToDataTable([
 			['Zeiss', 'Médio Zeiss', 'Médio Cliente'],
 			['Zeiss', 127, 155]
 		]), google.charts.Bar.convertOptions({
-			width: $(window).width(),
-			isStacked: false,
-			legend:{position:'top', maxLines:3, alignment: 'end'}
+			width: $(window).width()-35,
+			legend: {position: 'none'},
+			isStacked: false
 		}));
 	});//#53A8FB
 	
