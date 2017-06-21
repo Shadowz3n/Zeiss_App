@@ -56,6 +56,42 @@
 			</div>
 			
 			<div class="app">
+				<div id="add_comparation_modal" uk-modal>
+					<div class="uk-modal-dialog uk-modal-body">
+						<p class="zeiss_color uk-text-large">Sugestão</p>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
+						</div>
+						
+						<p class="zeiss_color uk-text-large">Zeiss</p>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
+						</div>
+						<div class="uk-width-1-1 input_margin_zeiss">
+							<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
+						</div>
+						
+						<p class="uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">CANCELAR</button>
+							<button class="uk-button uk-button-primary" type="button">ADICIONAR</button>
+						</p>
+					</div>
+				</div>
 				<div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
 					<div class="uk-offcanvas-bar">
 						<ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
@@ -155,7 +191,7 @@
 												</table>
 												
 												<p class="zeiss_color uk-text-large">Zeiss</p>
-												<table class="uk-table uk-table-hover uk-table-middle uk-table-divider table_line_height">
+												<table class="uk-margin uk-table uk-table-hover uk-table-middle uk-table-divider table_line_height">
 													<thead>
 														<tr>
 															<td class="uk-table-shrink">Produto</td>
@@ -197,21 +233,22 @@
 														</tr>
 													</tbody>
 												</table>
+												<div class="add_comparation" uk-toggle="target: #add_comparation_modal">+</div>
 											</li>
 											<li>
 												<ul class="uk-list list_line_height">
 													<li>
-														<span class="icon_in_list zeiss_color" uk-icon="icon: bookmark"></span>
+														<i class="icon_in_list zeiss_color material-icons">&#xE866;</i>
 														<span class="zeiss_color">Economia Mensal</span><br>
 														R$ 16.767,50
 													</li>
 													<li>
-														<span class="icon_in_list zeiss_color" uk-icon="icon: bookmark"></span>
+														<i class="icon_in_list zeiss_color material-icons">&#xE86E;</i>
 														<span class="zeiss_color">Economia Anual</span><br>
 														R$ 201.210,00
 													</li>
 													<li>
-														<span class="icon_in_list zeiss_color" uk-icon="icon: play"></span>
+														<i class="icon_in_list zeiss_color material-icons">&#xE037;</i>
 														<span class="zeiss_color">Economize pelo SAO WEB+</span><br>
 														R$ 4.024,20
 													</li>

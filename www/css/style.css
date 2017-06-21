@@ -12,9 +12,11 @@ a{text-decoration:none}
 .app{display:none}
 .uk_navbar_zeiss{background:#2449a4!important;height:115px}
 .uk-tab>.uk-active>a{color:#fff!important;border-color:#fff!important}
-.icon_in_list{display:table;float:left;width:15%}
+.icon_in_list{display:table;float:left;width:15%;font-style:normal;font-size:28px;font-family:'material_icons'!important;margin-top:3px}
 .zeiss_color{color:#2449a4}
 .list_line_height{line-height:15px;margin-bottom:20px}
 .table_line_height{line-height:0px!important}
 .menu_overflow_in_navbar{margin-bottom:3px}
 .uk-tab>*>a{border-bottom:3px solid transparent;-webkit-transition:all .5s ease;transition:all .5s ease}
+.add_comparation{background:#2449a4;width:45px;height:45px;line-height:45px;display:table;right:2%;bottom:2%;font-size:28px;color:white!important;border-radius:50%;-webkit-border-radius:50%;text-align:center;position:fixed}
+.input_margin_zeiss{margin-bottom:7px}
