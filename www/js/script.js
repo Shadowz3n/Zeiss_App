@@ -12,10 +12,9 @@ $(document).ready(function(){
 			['Markup', 4, 3]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width()-35,
-			legend:{position:'none'},
-			isStacked: false
+			legend:{position:'left',alignment:'start'},
+			isStacked: true
 		}));
-		console.log(google.charts.Bar.convertOptions({legend:{position:'in'}}));
 		
 		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
 		chart.draw(google.visualization.arrayToDataTable([
@@ -23,7 +22,7 @@ $(document).ready(function(){
 			['Zeiss', 127, 155]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width()-35,
-			legend: {position: 'none'},
+			legend:{position:'left',alignment:'start'},
 			isStacked: false
 		}));
 	});//#53A8FB
