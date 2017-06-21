@@ -93,14 +93,16 @@ $(document).ready(function(){
 		}
 		var lineTable_sugestao	= '<tr>';
 		$("#add_comparation_modal").find("input[data-appendto='table_sugestao']").each(function(){
-			lineTable_sugestao	+= '<td>'+$(this).val()+'</td>';
+			var thisValue		= ($(this).is(".only_numbers"))? $(this).val().toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }):$(this).val();
+			lineTable_sugestao	+= '<td>'+thisValue+'</td>';
 		});
 		lineTable_sugestao		+= '</tr>';
 		$(".table_sugestao").find("tbody").append(lineTable_sugestao);
 		
 		var lineTable_zeiss		= '<tr>';
 		$("#add_comparation_modal").find("input[data-appendto='table_zeiss']").each(function(){
-			lineTable_zeiss	+= '<td>'+$(this).val()+'</td>';
+			var thisValue		= ($(this).is(".only_numbers"))? $(this).val().toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }):$(this).val();
+			lineTable_zeiss	+= '<td>'+thisValue+'</td>';
 		});
 		lineTable_zeiss		+= '</tr>';
 		$(".table_zeiss").find("tbody").append(lineTable_zeiss);
