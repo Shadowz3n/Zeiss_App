@@ -1,25 +1,25 @@
 //document.addEventListener('deviceready', function(){
 $(document).ready(function(){
 
-	var app_url	= "http://www.zeisscalc.com.br/", first_comparation=true;
+	var app_url	= "http://www.zeisscalc.com.br/", first_comparation=true, chart_markut, chart_zeiss;
 
 	google.charts.load('current', {'packages':['bar']});
 	
 	google.charts.setOnLoadCallback(function(){
-		var chart = new google.charts.Bar(document.getElementById('markup_chart'));
-		chart.draw(google.visualization.arrayToDataTable([
-			['Markup', 'Médio Zeiss', 'Médio Cliente'],
-			['Markup', 4, 3]
+		chart_markut = new google.charts.Bar(document.getElementById('markup_chart'));
+		chart_markut.draw(google.visualization.arrayToDataTable([
+			['Markup', 'Médio Cliente', 'Médio Zeiss'],
+			['Markup', 0, 0]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width()-35,
 			legend:{position:'left',alignment:'start'},
 			isStacked: false
 		}));
 		
-		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
-		chart.draw(google.visualization.arrayToDataTable([
-			['Zeiss', 'Médio Zeiss', 'Médio Cliente'],
-			['Zeiss', 127, 155]
+		chart_zeiss = new google.charts.Bar(document.getElementById('custo_chart'));
+		chart_zeiss.draw(google.visualization.arrayToDataTable([
+			['Zeiss', 'Médio Cliente', 'Médio Zeiss'],
+			['Zeiss', 0, 0]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width()-35,
 			legend:{position:'left',alignment:'start'},
@@ -44,6 +44,22 @@ $(document).ready(function(){
 		lucro_mensal	= ((zeiss_venda-zeiss_custo) - (sugestao_venda-sugestao_custo));
 		lucro_anual		= lucro_mensal*12;
 		lucro_sao_web	= lucro_anual*0.02;
+		
+		chart_sugestao	= (sugestao_venda*100)/sugestao_custo;
+		chart_zeiss		= (zeiss_venda*100)/zeiss_custo;
+		
+		if(chart_markut){
+			chart_markut.draw(google.visualization.arrayToDataTable([
+				['Markup', 'Médio Cliente', 'Médio Zeiss'],
+				['Markup', chart_sugestao, chart_zeiss]
+			]), google.charts.Bar.convertOptions({
+				width: $(window).width()-35,
+				legend:{position:'left',alignment:'start'},
+				isStacked: false
+			}));
+		}
+		console.log(chart_sugestao);
+		console.log(chart_zeiss);
 		
 		$("#economia_mensal").html(lucro_mensal.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
 		$("#economia_anual").html(lucro_anual.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
