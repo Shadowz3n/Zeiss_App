@@ -22,3 +22,5 @@ a{text-decoration:none}
 .add_comparation{background:#2449a4;width:45px;height:45px;line-height:45px;display:table;right:2%;bottom:2%;font-size:28px;color:white!important;border-radius:50%;-webkit-border-radius:50%;text-align:center;position:fixed}
 .input_margin_zeiss{margin-bottom:7px}
 .margin_left_0{margin-left:0px!important}
+.uk-panel{z-index:9;position:fixed!important;display:table;width:100%;top:0px}
+.app_content{position:relative;margin-top:130px}
