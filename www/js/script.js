@@ -15,6 +15,8 @@ $(document).ready(function(){
 		});
 	});
 	
+	UIkit.tab($("#switcher_menu"), {});
+	
 	/* App login */
 	$(document).on("submit", ".login_form", function(){
 		var thisForm	= $(this);
