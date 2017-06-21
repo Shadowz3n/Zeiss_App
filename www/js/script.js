@@ -41,8 +41,8 @@ $(document).ready(function(){
 			zeiss_venda	+= Number($(this).find("td").eq(1).html().replace(",", ".")) * Number($(this).find("td").eq(3).html().replace(",", "."));
 		});
 		
-		var lucro_mensal	= ((zeiss_venda-zeiss_custo) - (sugestao_venda-sugestao_custo));
-			lucro_anual		= lucro_mensal*12;
+		lucro_mensal	= ((zeiss_venda-zeiss_custo) - (sugestao_venda-sugestao_custo));
+		lucro_anual		= lucro_mensal*12;
 			
 		$("#economia_mensal").html(lucro_mensal.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
 		$("#economia_anual").html(lucro_anual.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
