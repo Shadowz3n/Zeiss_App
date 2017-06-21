@@ -1,7 +1,7 @@
 //document.addEventListener('deviceready', function(){
 $(document).ready(function(){
 
-	var app_url	= "http://www.zeisscalc.com.br/";
+	var app_url	= "http://www.zeisscalc.com.br/", first_comparation=true;
 
 	google.charts.load('current', {'packages':['bar']});
 	
@@ -86,7 +86,11 @@ $(document).ready(function(){
 		});
 		return false;
 	}).on("submit", ".add_comparation_form", function(){
-	
+		if(first_comparation){
+			first_comparation	= false;
+			$(".table_sugestao").find("tbody").html("");
+			$(".table_zeiss").find("tbody").html("");
+		}
 		var lineTable_sugestao	= '<tr>';
 		$("#add_comparation_modal").find("input[data-appendto='table_sugestao']").each(function(){
 			lineTable_sugestao	+= '<td>'+$(this).val()+'</td>';
