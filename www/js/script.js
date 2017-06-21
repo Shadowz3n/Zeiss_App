@@ -1,5 +1,19 @@
 //document.addEventListener('deviceready', function(){
 $(document).ready(function(){
+
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(function(){
+		var chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
+		chart.draw(google.visualization.arrayToDataTable([
+			['',  'Médio Cliente', 'Médio Zeiss'],
+			['Markup', 3, 7]
+		]), {
+			title: '', 
+			isStacked: false,
+			legend: { position: 'top' },
+			colors: ['#000000', '#53A8FB']
+		});
+	});
 	
 	/* App login */
 	$(document).on("submit", ".login_form", function(){
