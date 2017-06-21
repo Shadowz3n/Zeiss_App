@@ -1,6 +1,6 @@
 @font-face{font-family:'material_icons';src: url('../fonts/MaterialIcons-Regular.eot');src: url('../fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),url('../fonts/MaterialIcons-Regular.woff') format('woff'),url('../fonts/MaterialIcons-Regular.ttf')  format('truetype'),url('../fonts/MaterialIcons-Regular.svg#material_icons') format('svg')}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}
-html,body{margin:0px;padding:0px;font-family:'material_icons'}
+html,body{margin:0px;padding:0px;font-family:arial!important}
 html{width:100%;height:100%}
 body{background:#ffffff;color:#000000;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-user-select:none;font-family:sfns;font-size:12px;height:100%;width:100%;height:100%}
 a{text-decoration:none}
@@ -11,4 +11,10 @@ a{text-decoration:none}
 .logo_app{width:65px;height:auto;position:relative;margin:15px}
 .app{display:none}
 .uk_navbar_zeiss{background:#2449a4!important;height:115px}
-.uk-tab>.uk-active>a{color:#fff!important}
+.uk-tab>.uk-active>a{color:#fff!important;border-color:#fff!important}
+.icon_in_list{display:table;float:left;width:15%}
+.zeiss_color{color:#2449a4}
+.list_line_height{line-height:15px;margin-bottom:20px}
+.table_line_height{line-height:0px!important}
+.menu_overflow_in_navbar{margin-bottom:3px}
+.uk-tab>*>a{border-bottom:3px solid transparent;-webkit-transition:all .5s ease;transition:all .5s ease}
