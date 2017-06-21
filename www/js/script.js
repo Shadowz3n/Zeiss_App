@@ -79,7 +79,6 @@ $(document).ready(function(){
 				$(".btn_login_form").find("div").removeClass("uk-hidden").end().find("span").html(" CARREGANDO..");
 			}
 		}).done(function(data){
-			console.log(data);
 			if(Number(data)>0){
 				window.localStorage.user_id	= Number(data);
 				$(".zeiss_login").stop().fadeOut(250, function(){
