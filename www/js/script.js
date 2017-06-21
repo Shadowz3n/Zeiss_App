@@ -8,7 +8,7 @@ $(document).ready(function(){
 		var markup_chart = new google.visualization.SteppedAreaChart(document.getElementById('markup_chart'));
 		markup_chart.draw(google.visualization.arrayToDataTable([
 			['',  'Médio Cliente', 'Médio Zeiss'],
-			['Markup', 3, 7]
+			['Markup', 3, 4]
 		]), {
 			isStacked: false,
 			width:$(window).width(),
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		var custo_chart = new google.visualization.SteppedAreaChart(document.getElementById('custo_chart'));
 		custo_chart.draw(google.visualization.arrayToDataTable([
 			['',  'Médio Cliente', 'Médio Zeiss'],
-			['Custo', 3, 7]
+			['Custo', 155, 127]
 		]), {
 			isStacked: false,
 			width:$(window).width(),
