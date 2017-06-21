@@ -13,7 +13,7 @@ $(document).ready(function(){
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width()-35,
 			legend:{position:'left',alignment:'start'},
-			isStacked: true
+			isStacked: false
 		}));
 		
 		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
