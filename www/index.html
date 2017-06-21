@@ -58,40 +58,42 @@
 			<div class="app">
 				<div id="add_comparation_modal" uk-modal>
 					<div class="uk-modal-dialog uk-modal-body">
-						<p class="zeiss_color uk-text-large">Sugestão</p>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
-						</div>
-						
-						<p class="zeiss_color uk-text-large">Zeiss</p>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
-						</div>
-						<div class="uk-width-1-1 input_margin_zeiss">
-							<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
-						</div>
-						
-						<div class="uk-text-right uk-container">
-							<div class="margin_left_0" uk-grid>
-								<button class="uk-button uk-width-1-2 uk-button-default uk-modal-close" type="button">CANCELAR</button>
-								<button class="uk-button uk-width-1-2 uk-button-primary" type="button">ADICIONAR</button>
+						<form class="add_comparation_form">
+							<p class="zeiss_color uk-text-large">Sugestão</p>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
 							</div>
-						</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
+							</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
+							</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
+							</div>
+						
+							<p class="zeiss_color uk-text-large">Zeiss</p>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[product]" placeholder="Produto">
+							</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[qtd]" placeholder="Qtde">
+							</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[cust]" placeholder="Custo">
+							</div>
+							<div class="uk-width-1-1 input_margin_zeiss">
+								<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
+							</div>
+						
+							<div class="uk-text-right uk-container">
+								<div class="margin_left_0" uk-grid>
+									<button class="uk-button uk-width-1-2 uk-button-default uk-modal-close" type="button">CANCELAR</button>
+									<button class="uk-button uk-width-1-2 uk-button-primary" type="submit">ADICIONAR</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				<div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
@@ -161,33 +163,9 @@
 													<tbody>
 														<tr>
 															<td>A</td>
-															<td>125</td>
-															<td>155,00</td>
-															<td>490,00</td>
-														</tr>
-														<tr>
-															<td>B</td>
-															<td>50</td>
-															<td>280,00</td>
-															<td>690,00</td>
-														</tr>
-														<tr>
-															<td>C</td>
-															<td>25</td>
-															<td>320,00</td>
-															<td>850,00</td>
-														</tr>
-														<tr>
-															<td>D</td>
-															<td>75</td>
-															<td>65,00</td>
-															<td>260,00</td>
-														</tr>
-														<tr>
-															<td>E</td>
-															<td>75</td>
-															<td>92,00</td>
-															<td>360,00</td>
+															<td>0</td>
+															<td>0,00</td>
+															<td>0,00</td>
 														</tr>
 													</tbody>
 												</table>
@@ -205,33 +183,9 @@
 													<tbody>
 														<tr>
 															<td>A</td>
-															<td>125</td>
-															<td>127,00</td>
-															<td>500,00</td>
-														</tr>
-														<tr>
-															<td>B</td>
-															<td>50</td>
-															<td>162,90</td>
-															<td>690,00</td>
-														</tr>
-														<tr>
-															<td>C</td>
-															<td>25</td>
-															<td>298,00</td>
-															<td>950,00</td>
-														</tr>
-														<tr>
-															<td>D</td>
-															<td>75</td>
-															<td>31,90</td>
-															<td>260,00</td>
-														</tr>
-														<tr>
-															<td>E</td>
-															<td>75</td>
-															<td>83,60</td>
-															<td>360,00</td>
+															<td>0</td>
+															<td>0,00</td>
+															<td>0,00</td>
 														</tr>
 													</tbody>
 												</table>
@@ -252,7 +206,7 @@
 													<li>
 														<i class="icon_in_list zeiss_color material-icons">&#xE037;</i>
 														<span class="zeiss_color">Economize pelo SAO WEB+</span><br>
-														R$ 4.024,20
+														R$ <span id="economia_sao_web">4.024,20</span>
 													</li>
 												</ul>
 												<div class="uk-width-1-1" id="markup_chart"></div>
