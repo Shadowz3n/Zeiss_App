@@ -86,10 +86,12 @@
 							<input class="uk-input uk-form-small" type="text" name="comp[sell]" placeholder="Venda">
 						</div>
 						
-						<p class="uk-text-right">
-							<button class="uk-button uk-button-default uk-modal-close" type="button">CANCELAR</button>
-							<button class="uk-button uk-button-primary" type="button">ADICIONAR</button>
-						</p>
+						<div class="uk-text-right uk-container">
+							<div uk-grid>
+								<button class="uk-button uk-width-1-2 uk-button-default uk-modal-close" type="button">CANCELAR</button>
+								<button class="uk-button uk-width-1-2 uk-button-primary" type="button">ADICIONAR</button>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
@@ -117,7 +119,7 @@
 								</ul>
 							</li>
 							<li class="uk-nav-divider uk-margin"></li>
-							<li><a href="sair.php"><span class="uk-margin-small-right" uk-icon="icon: lock"></span> Sair</a></li>
+							<li><a href="#" class="exit_app"><span class="uk-margin-small-right" uk-icon="icon: lock"></span> Sair</a></li>
 						</ul>
 					</div>
 				</div>

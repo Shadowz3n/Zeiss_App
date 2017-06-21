@@ -12,16 +12,18 @@ $(document).ready(function(){
 			['Markup', 4, 3]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width(),
-			chart: {legend: {position: 'top'}}
+			isStacked: false,
+			legent:{position:'top', alignment: 'end'}
 		}));
 		
 		var chart = new google.charts.Bar(document.getElementById('custo_chart'));
 		chart.draw(google.visualization.arrayToDataTable([
-			['Markup', 'Médio Zeiss', 'Médio Cliente'],
-			['Markup', 127, 155]
+			['Zeiss', 'Médio Zeiss', 'Médio Cliente'],
+			['Zeiss', 127, 155]
 		]), google.charts.Bar.convertOptions({
 			width: $(window).width(),
-			legend: {position: 'top'}
+			isStacked: false,
+			legend:{position:'top', maxLines:3, alignment: 'end'}
 		}));
 	});//#53A8FB
 	
@@ -44,6 +46,8 @@ $(document).ready(function(){
 			if(Number(data)>0){
 				$(".zeiss_login").stop().fadeOut(250, function(){
 					$(".app").stop().fadeIn(250);
+					$(".login_form").find("input, button").prop({disabled:false});
+					$(".btn_login_form").find("div").addClass("uk-hidden").end().find("span").html(" ENTRAR");
 				});
 			}else{
 				UIkit.notification('Login ou senha incorretos, por favor tente novamente.', 'danger');
@@ -55,6 +59,12 @@ $(document).ready(function(){
 			$(thisForm).find("input, button").prop({disabled:false});
 			$(".btn_login_form").find("div").addClass("uk-hidden").end().find("span").html(" ENTRAR");
 		});
+		return false;
+	}).on("click", ".exit_app", function(){
+		$(".app").stop().fadeOut(250, function(){
+			$(".zeiss_login").stop().fadeIn(250);
+		});
+		$("#offcanvas-nav").click();
 		return false;
 	});
 });
