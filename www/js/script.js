@@ -58,8 +58,6 @@ $(document).ready(function(){
 				isStacked: false
 			}));
 		}
-		console.log(chart_sugestao);
-		console.log(chart_zeiss);
 		
 		$("#economia_mensal").html(lucro_mensal.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
 		$("#economia_anual").html(lucro_anual.toLocaleString('pt-BR', { minimumFractionDigits:2 , currency:'BRL' }));
